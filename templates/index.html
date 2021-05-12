@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NbaStatApp</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/stylesheet.css')}}">
+   
+  </head>
+  <body>
+    <h1 id = "header" style="text-align:center;color:#F0FFFF"><strong>NBA</strong> <strong>PLAYER</strong> STATISTICS</strong></h>
+
+    <form action="/get_player_data/" method="post" target="_self">
+      <h1 style="text-align:center;color:white">Please input the Name and Option</h1>
+      <input style = "color: black" id="firstname" type ="text-align" placeholder="Player Name" name="name">
+       <label style = "color: orange" for="cars">Choose an Option:</label>
+       <select name="Option" id = "Option">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+       </select>
+      <input type = "submit" value = "Enter" class="button">
+      <div>
+        <ol>
+          <li style="text-align:left">Years the player has played</li>
+          <li style="text-align:left">Most points scored in a season</li>
+          <li style="text-align:left">Update the first name of the player</li>
+          <li style="text-align:left">What teams did he play for</li>
+        </ol>
+      </div>
+   </form>
+  </body>
+</html>
